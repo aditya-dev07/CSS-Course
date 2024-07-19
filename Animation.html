@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100wh;
+            background-color: aqua;
+            
+        }
+        .box{
+            width: 300px;
+            background-color: red;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation-name: widthAnimate;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+            animation-direction: normal;
+            animation-direction: reverse;
+            animation-direction: alternate-reverse; */
+            /* animation: colorAnimate 2s ease-in-out 1s 5; */
+            animation: widthAnimate 2s ease-in-out 1s 5 alternate;
+
+
+        }
+        /* @keyframes colorAnimate { 
+            from{
+               background-color: red;
+            }
+            to{
+               
+                background-color: green;
+            }
+        } */
+        @keyframes widthAnimate { 
+            from{
+                width: 300px;
+                height: 300px;
+                background-color: red;
+            }
+            to{
+                width: 100vw;
+                height: 100vh;
+                background-color: blue;
+                /* we can use % like 10%, 100% in the place of "from" or "to" */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">This is me</div>
+    </div>
+</body>
+</html>
